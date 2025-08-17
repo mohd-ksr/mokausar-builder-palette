@@ -132,7 +132,7 @@
   }
 
   .card-project {
-    @apply bg-gradient-to-br from-card via-card to-muted/20 border border-border/30 rounded-2xl p-6 transition-all duration-500 hover:shadow-strong hover:-translate-y-2 hover:border-primary/50 group cursor-pointer;
+    @apply bg-gradient-to-br from-card via-card to-muted/20 border border-border/30 rounded-2xl p-6 transition-all duration-500 hover:shadow-strong hover:-translate-y-2 hover:border-primary/50 cursor-pointer;
   }
 
   /* Text gradients */
