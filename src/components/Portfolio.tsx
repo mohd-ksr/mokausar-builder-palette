@@ -1,12 +1,18 @@
 import { ExternalLink, Github, Eye, Star, Code, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logo from "@/assets/logo.png";
-
+import logo from "@/assets/game-logo.png";
+import trackerImg from "@/assets/website-time-tracker.png"
+import foodImg from "@/assets/food-donation.jpeg"
+import chatbotImg from "@/assets/chat-bot.png"
+import preorderImg from "@/assets/preorder-food.png"
+import resqnetImg from "@/assets/resqnet.png"
+import snakeImg from "@/assets/snake-game.png"
 const Portfolio = () => {
   const projects = [
     {
       title: "Website Activity Tracker Extension",
       link: "https://github.com/mohd-ksr/web-time-tracker",
+      image: trackerImg,
       description: "Browser extension that tracks time spent on websites and visualizes usage through interactive pie charts with CSV export functionality.",
       tech: ["JavaScript", "HTML/CSS", "Chrome Extension API", "Chart.js"],
       category: "Browser Extension",
@@ -23,6 +29,7 @@ const Portfolio = () => {
     {
       title: "Food Distribution Optimization (ML)",
       link: "https://github.com/mohd-ksr/food-demand-predictor",
+      image: foodImg,
       description: "Machine learning model for predicting food demand to minimize waste and optimize distribution logistics.",
       tech: ["Python", "Machine Learning", "Data Analysis", "Optimization"],
       category: "AI/ML",
@@ -34,6 +41,7 @@ const Portfolio = () => {
     {
       title: "Career Chatbot (Oracle Career Pathway)",
       link: "https://github.com/mohd-ksr/CareerMate-chatbot",
+      image: chatbotImg,
       description: "Intelligent career guidance assistant providing personalized recommendations and pathway suggestions.",
       tech: ["Chatbot Development", "AI", "Natural Language Processing", "Career Guidance"],
       category: "AI/Chatbot",
@@ -45,6 +53,7 @@ const Portfolio = () => {
     {
       title: "Smart Food Pre-Ordering System",
       link: "https://github.com/mohd-ksr/pre-food-order",
+      image: preorderImg,
       description: "Full-stack food pre-ordering platform that allows students to order meals in advance using time slots, reducing queues and enabling admins to manage demand efficiently.",
       tech: ["FastAPI", "PostgreSQL", "React", "JWT Auth", "SQLAlchemy"],
       category: "Full Stack Application",
@@ -61,6 +70,7 @@ const Portfolio = () => {
     {
       title: "ResQNet – Disaster Management & Volunteer Coordination Platform",
       link: "https://github.com/mohd-ksr/resqnet",
+      image: resqnetImg,
       description: "Full-stack MERN platform for real-time disaster response that connects victims, volunteers, and authorities, enabling incident reporting, geolocation tracking, and efficient task coordination.",
       tech: ["MongoDB", "Express.js", "React", "Node.js", "JWT Auth", "Framer Motion"],
       category: "AI Application",
@@ -77,6 +87,7 @@ const Portfolio = () => {
     {
       title: "Snake Game (Enhanced)",
       link: "https://github.com/mohd-ksr/snake-game",
+      image: snakeImg,
       description: "Classic Snake game reimagined with modern styling, high-score tracking, and enhanced user interface.",
       tech: ["Game Development", "JavaScript", "UI/UX", "Local Storage"],
       category: "Game Development",
@@ -148,44 +159,88 @@ const Portfolio = () => {
                 </div>
               </div>
 
-              {/* Project Info */}
-              <div className="flex-1">
-                <h3 className="text-xl font-heading font-semibold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
-                  {project.title}
-                </h3>
 
-                <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
-                  {project.description}
-                </p>
 
-                {/* Features */}
-                <div className="mb-4">
-                  <div className="flex flex-wrap gap-2">
-                    {project.features.map((feature, featureIndex) => (
-                      <span
-                        key={featureIndex}
-                        className="px-2 py-1 bg-muted/50 text-muted-foreground text-xs rounded-md"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-                </div>
 
-                {/* Tech Stack */}
-                <div className="mb-6">
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-gradient-primary text-white text-xs rounded-full font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              {/* Project Info - Flip Card */}
+{/* Project Info - Flip Card */}
+<div className="p-2 flex-1" style={{ perspective: '1000px' }}>
+  <div
+    className="relative transition-transform duration-700"
+    style={{
+      transformStyle: 'preserve-3d',
+      height: '280px',
+    }}
+    onMouseEnter={e => (e.currentTarget.style.transform = 'rotateY(180deg)')}
+    onMouseLeave={e => (e.currentTarget.style.transform = 'rotateY(0deg)')}
+  >
+    {/* FRONT SIDE */}
+    <div
+      className="absolute inset-0 overflow-hidden"
+      style={{ backfaceVisibility: 'hidden' }}
+    >
+      <h3 className="text-lg font-heading font-semibold mb-2 text-foreground transition-colors duration-300">
+        {project.title}
+      </h3>
+
+      <p className="text-muted-foreground mb-3 leading-relaxed text-sm line-clamp-3">
+        {project.description}
+      </p>
+
+      {/* Features */}
+      <div className="mb-3">
+        <div className="flex flex-wrap gap-1">
+          {project.features.map((feature, featureIndex) => (
+            <span
+              key={featureIndex}
+              className="px-2 py-1 bg-muted/50 text-muted-foreground text-xs rounded-md"
+            >
+              {feature}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Tech Stack */}
+      <div>
+        <div className="flex flex-wrap gap-1">
+          {project.tech.map((tech, techIndex) => (
+            <span
+              key={techIndex}
+              className="px-2 py-1 bg-gradient-primary text-white text-xs rounded-full font-medium"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    {/* BACK SIDE - Project Theme Image */}
+    <div
+      className="absolute inset-0 rounded-xl overflow-hidden"
+      style={{
+        backfaceVisibility: 'hidden',
+        transform: 'rotateY(180deg)',
+      }}
+    >
+      <img
+        src={project.image}
+        alt={project.title}
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-4">
+        <div>
+          <span className="text-white font-bold text-base block">{project.title}</span>
+          <span className="text-white/70 text-xs">{project.category}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
               {/* Project Actions */}
               <div className="flex gap-3 mt-auto">

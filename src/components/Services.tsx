@@ -51,7 +51,7 @@ const Services = () => {
   ];
 
   const handleContactClick = () => {
-    const element = document.querySelector('#contact');
+    const element = document.querySelector('#portfolio');
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -59,11 +59,11 @@ const Services = () => {
     <section id="services" className="section-padding bg-white/40 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-gradient-primary mb-4">
-            What I Can Build
+          <h2 className="p-3 text-4xl lg:text-5xl font-heading font-bold text-gradient-primary mb-4">
+            What I’m Building & Exploring
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive solutions to bring your ideas to life
+            A collection of technologies and domains where I actively build projects and deepen my expertise.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ const Services = () => {
                     variant="outline"
                     className="w-full group hover:bg-primary hover:text-white transition-all duration-300"
                   >
-                    Get Started
+                    Explore Projects
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </Button>
                 </div>
