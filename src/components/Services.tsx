@@ -56,11 +56,11 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="section-padding bg-gradient-to-br from-muted/10 to-background">
+    <section id="services" className="section-padding bg-white/40 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-gradient-primary mb-4">
-            Services I Offer
+            What I Can Build
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Comprehensive solutions to bring your ideas to life
@@ -71,7 +71,7 @@ const Services = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div 
+              <div
                 key={index}
                 className={`card-project ${service.borderColor} h-full`}
                 style={{ animationDelay: `${index * 100}ms` }}
@@ -79,18 +79,18 @@ const Services = () => {
                 <div className={`w-16 h-16 ${service.bgColor} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <Icon className={`h-8 w-8 ${service.color}`} />
                 </div>
-                
+
                 <h3 className="text-xl font-heading font-semibold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">
                   {service.title}
                 </h3>
-                
+
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
                 <div className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <div 
+                    <div
                       key={featureIndex}
                       className="flex items-center gap-3 text-sm"
                     >
@@ -101,9 +101,9 @@ const Services = () => {
                 </div>
 
                 <div className="mt-auto">
-                  <Button 
+                  <Button
                     onClick={handleContactClick}
-                    variant="outline" 
+                    variant="outline"
                     className="w-full group hover:bg-primary hover:text-white transition-all duration-300"
                   >
                     Get Started
@@ -120,7 +120,7 @@ const Services = () => {
           <h3 className="text-2xl font-heading font-semibold text-center mb-12 text-gradient-accent">
             My Development Process
           </h3>
-          
+
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
@@ -129,7 +129,7 @@ const Services = () => {
                 description: "Understanding your needs and defining project scope"
               },
               {
-                step: "02", 
+                step: "02",
                 title: "Planning",
                 description: "Creating detailed roadmap and technical architecture"
               },
@@ -140,8 +140,8 @@ const Services = () => {
               },
               {
                 step: "04",
-                title: "Delivery",
-                description: "Testing, deployment, and ongoing support"
+                title: "Maintenance",
+                description: "Ensuring stability with monitoring, updates, and ongoing improvements"
               }
             ].map((phase, index) => (
               <div key={index} className="text-center group">
@@ -158,16 +158,16 @@ const Services = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <h3 className="text-2xl font-heading font-semibold mb-4 text-foreground">
-            Ready to Start Your Project?
+             Open to Collaboration & Opportunities
           </h3>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let's discuss how I can help bring your ideas to life with cutting-edge technology and innovative solutions.
+            I'm always excited to collaborate with teams, contribute to impactful projects, and continue learning while building innovative solutions.
           </p>
-          <Button 
+          <Button
             onClick={handleContactClick}
             className="btn-hero"
           >
-            Let's Work Together
+            Connect With Me
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>

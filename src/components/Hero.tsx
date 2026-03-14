@@ -1,6 +1,6 @@
 import { ArrowRight, Download, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import profileImage from '@/assets/mo-kausar-profile.jpg';
+import profileImage from '@/assets/kausar.png';
 
 const Hero = () => {
   const handleContactClick = () => {
@@ -14,7 +14,8 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-muted/20 section-padding">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-transparent section-padding">
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-100 via-white to-sky-100"></div>
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
@@ -24,7 +25,7 @@ const Hero = () => {
                 <span className="text-gradient-primary">Mo Kausar</span>
               </h1>
               <h2 className="text-2xl lg:text-3xl font-semibold text-muted-foreground mb-4">
-                AI | Machine Learning | Web Development
+                AI | Machine Learning | Web Development | Competitive Programming
               </h2>
               <p className="text-lg lg:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
                 Turning ideas into practical solutions with AI, ML, and modern web applications.
@@ -51,7 +52,7 @@ const Hero = () => {
             {/* Quick Stats */}
             <div className="mt-12 grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0">
               <div className="text-center">
-                <div className="text-2xl font-bold text-gradient-accent">50+</div>
+                <div className="text-2xl font-bold text-gradient-accent">10+</div>
                 <div className="text-sm text-muted-foreground">Projects</div>
               </div>
               <div className="text-center">
@@ -60,7 +61,7 @@ const Hero = () => {
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-gradient-accent">B.Tech</div>
-                <div className="text-sm text-muted-foreground">CS (ML)</div>
+                <div className="text-sm text-muted-foreground">CSE (ML)</div>
               </div>
             </div>
           </div>

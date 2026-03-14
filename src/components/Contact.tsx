@@ -70,7 +70,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-gradient-to-br from-muted/10 to-background">
+    <section id="contact" className="section-padding bg-white/40 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-gradient-primary mb-4">

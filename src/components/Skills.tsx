@@ -14,35 +14,35 @@ const Skills = () => {
       icon: Brain,
       color: "text-secondary",
       bgColor: "bg-secondary/10",
-      skills: ["Time Series Forecasting", "Demand Prediction", "Data Analysis", "NumPy", "Pandas"]
+      skills: ["Time Series Forecasting", "Data Analysis", "NumPy", "Pandas", "Matplotlib", "Scikit-learn", "TensorFlow", "PyTorch"]
     },
     {
       title: "Web Development",
       icon: Globe,
       color: "text-accent",
       bgColor: "bg-accent/10",
-      skills: ["React", "Flutter", "Streamlit", "Gradio", "Responsive Design", "UI/UX"]
+      skills: ["React", "Node", "Flutter", "Streamlit", "Gradio", "Responsive Design", "UI/UX"]
     },
     {
       title: "Tools & Platforms",
       icon: Settings,
       color: "text-success",
       bgColor: "bg-success/10",
-      skills: ["GitHub", "Jupyter", "RapidAPI", "Hugging Face", "OpenAI", "DeepSeek"]
+      skills: ["GitHub", "Jupyter", "VS Code,", "Hugging Face", "OpenAI", "Anaconda"]
     },
     {
       title: "AI Services",
       icon: Database,
       color: "text-warning",
       bgColor: "bg-warning/10",
-      skills: ["OpenAI API", "DeepSeek", "Gemini", "Chatbot Development", "PDF Generation"]
+      skills: ["OpenAI API", "DeepSeek", "Gemini", "Chatbot Development", "AI Integration"]
     },
     {
       title: "Specializations",
       icon: Palette,
       color: "text-purple-500",
       bgColor: "bg-purple-500/10",
-      skills: ["Optimization Models", "Education Tech", "Automation", "Data Visualization"]
+      skills: ["Machine Learning", "Optimization Models", "Education Tech", "Automation", "Data Visualization"]
     }
   ];
 
@@ -55,7 +55,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="section-padding bg-background">
+    <section id="skills" className="section-padding bg-white/40 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-gradient-primary mb-4">
@@ -129,8 +129,8 @@ const Skills = () => {
               <div className="space-y-4">
                 {[
                   { skill: "Python", level: 90 },
-                  { skill: "JavaScript", level: 85 },
-                  { skill: "C++", level: 80 },
+                  { skill: "C++", level: 85 },
+                  { skill: "JavaScript", level: 89 },
                   { skill: "Web Development", level: 88 }
                 ].map((item, index) => (
                   <div key={index} className="space-y-2">
@@ -152,9 +152,9 @@ const Skills = () => {
               <h4 className="text-lg font-semibold mb-4 text-foreground">AI & Machine Learning</h4>
               <div className="space-y-4">
                 {[
-                  { skill: "Data Analysis", level: 85 },
                   { skill: "ML Algorithms", level: 82 },
                   { skill: "AI Integration", level: 88 },
+                  { skill: "Data Analysis", level: 85 },
                   { skill: "Chatbot Development", level: 90 }
                 ].map((item, index) => (
                   <div key={index} className="space-y-2">

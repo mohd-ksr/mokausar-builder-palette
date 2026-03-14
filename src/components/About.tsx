@@ -14,12 +14,12 @@ const About = () => {
       school: "Jai Prakash Narayan Sr. Sec. School",
       year: "Completed",
       status: "Graduated",
-      description: "Strong foundation in Mathematics and Computer Science."
+      description: "Strong foundation in Mathematics and Science."
     }
   ];
 
   return (
-    <section id="about" className="section-padding bg-gradient-to-br from-muted/10 to-background">
+    <section id="about" className="section-padding bg-white/40 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-gradient-primary mb-4">
@@ -57,7 +57,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Calendar className="h-5 w-5 text-primary" />
-                  <span>Available for projects</span>
+                  <span>Available for contributions</span>
                 </div>
               </div>
             </div>
