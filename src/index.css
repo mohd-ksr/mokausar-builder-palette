@@ -139,3 +139,31 @@
   }
 
 }
+
+/* 
+@keyframes skillsSlideOutLeft {
+  from { transform: translateX(0);     opacity: 1; }
+  to   { transform: translateX(-60px); opacity: 0; }
+}
+@keyframes skillsSlideOutRight {
+  from { transform: translateX(0);    opacity: 1; }
+  to   { transform: translateX(60px); opacity: 0; }
+}
+@keyframes skillsSlideInRight {
+  from { transform: translateX(60px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+@keyframes skillsSlideInLeft {
+  from { transform: translateX(-60px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+@keyframes skillsSlideInCenter {
+  from { transform: translateX(0); opacity: 0.4; }
+  to   { transform: translateX(0); opacity: 1;   }
+}
+
+.skills-slide-out-left  { animation: skillsSlideOutLeft  0.4s ease forwards; }
+.skills-slide-out-right { animation: skillsSlideOutRight 0.4s ease forwards; }
+.skills-slide-in-right  { animation: skillsSlideInRight  0.4s ease forwards; }
+.skills-slide-in-left   { animation: skillsSlideInLeft   0.4s ease forwards; }
+.skills-slide-in-center { animation: skillsSlideInCenter 0.4s ease forwards; } */

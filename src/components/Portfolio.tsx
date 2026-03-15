@@ -33,7 +33,8 @@ const Portfolio = () => {
       description: "Machine learning model for predicting food demand to minimize waste and optimize distribution logistics.",
       tech: ["Python", "Machine Learning", "Data Analysis", "Optimization"],
       category: "AI/ML",
-      status: "Completed",
+      status: "Live",
+      liveLink: "https://huggingface.co/spaces/mohd-ksr/food-demand-predictor",
       color: "text-success",
       bgColor: "bg-success/10",
       features: ["Demand Prediction", "Waste Reduction", "Data Visualization", "ML Algorithms"]
@@ -45,7 +46,8 @@ const Portfolio = () => {
       description: "Intelligent career guidance assistant providing personalized recommendations and pathway suggestions.",
       tech: ["Chatbot Development", "AI", "Natural Language Processing", "Career Guidance"],
       category: "AI/Chatbot",
-      status: "Completed",
+      status: "Live",
+      liveLink: "https://careermate-chatbot-gmkgqomcfeh5zkqu3huxue.streamlit.app/",
       color: "text-secondary",
       bgColor: "bg-secondary/10",
       features: ["Personalized Guidance", "AI-Powered", "Career Pathways", "Interactive Interface"]
@@ -58,6 +60,7 @@ const Portfolio = () => {
       tech: ["FastAPI", "PostgreSQL", "React", "JWT Auth", "SQLAlchemy"],
       category: "Full Stack Application",
       status: "Live",
+      liveLink: "https://pre-food-order.netlify.app/",
       color: "text-primary",
       bgColor: "bg-primary/10",
       features: [
@@ -74,7 +77,8 @@ const Portfolio = () => {
       description: "Full-stack MERN platform for real-time disaster response that connects victims, volunteers, and authorities, enabling incident reporting, geolocation tracking, and efficient task coordination.",
       tech: ["MongoDB", "Express.js", "React", "Node.js", "JWT Auth", "Framer Motion"],
       category: "AI Application",
-      status: "Completed",
+      status: "Live",
+      liveLink: "https://resqnet-frontend.netlify.app/",
       color: "text-primary",
       bgColor: "bg-primary/10",
       features: [
@@ -85,7 +89,7 @@ const Portfolio = () => {
       ]
     },
     {
-      title: "Snake Game (Enhanced)",
+      title: "Snake Game (Desktop Application)",
       link: "https://github.com/mohd-ksr/snake-game",
       image: snakeImg,
       description: "Classic Snake game reimagined with modern styling, high-score tracking, and enhanced user interface.",
@@ -119,8 +123,8 @@ const Portfolio = () => {
         {/* Project Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           <div className="card-gradient text-center">
-            <div className="text-3xl font-bold text-gradient-primary mb-2">6+</div>
-            <div className="text-sm text-muted-foreground">Completed Projects</div>
+            <div className="text-3xl font-bold text-gradient-primary mb-2">10+</div>
+            <div className="text-sm text-muted-foreground">Projects Built</div>
           </div>
           <div className="card-gradient text-center">
             <div className="text-3xl font-bold text-gradient-accent mb-2">3</div>
@@ -131,8 +135,8 @@ const Portfolio = () => {
             <div className="text-sm text-muted-foreground">Technologies Used</div>
           </div>
           <div className="card-gradient text-center">
-            <div className="text-3xl font-bold text-gradient-accent mb-2">100%</div>
-            <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+            <div className="text-3xl font-bold text-gradient-accent mb-2">∞</div>
+            <div className="text-sm text-muted-foreground">Learning Mindset</div>
           </div>
         </div>
 
@@ -144,18 +148,26 @@ const Portfolio = () => {
               className="card-project h-full flex flex-col hover:scale-[1.03] transition-transform duration-300"
               style={{ animationDelay: `${index * 100}ms` }}
             >
+
               {/* Project Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className={`p-3 ${project.bgColor} rounded-xl`}>
                   <Code className={`h-6 w-6 ${project.color}`} />
                 </div>
                 <div className="flex gap-2">
-                  <div className={`px-3 py-1 rounded-full text-xs font-medium ${project.status === 'Live'
-                    ? 'bg-success text-white'
-                    : 'bg-muted text-muted-foreground'
-                    }`}>
-                    {project.status}
-                  </div>
+                  {project.status === 'Live' ? (
+                    <button
+                      onClick={() => handleViewProject(project.liveLink)}
+                      className="px-3 py-1 rounded-full text-xs font-medium bg-success text-white hover:bg-success/80 transition-all duration-300 flex items-center gap-1"
+                    >
+                      <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
+                      Live
+                    </button>
+                  ) : (
+                    <div className="px-3 py-1 rounded-full text-xs font-medium bg-muted text-muted-foreground">
+                      {project.status}
+                    </div>
+                  )}
                 </div>
               </div>
 

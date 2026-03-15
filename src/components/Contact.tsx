@@ -77,7 +77,7 @@ const Contact = () => {
             Let's Connect
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to turn your ideas into reality? Let's discuss your project!
+            Open to internships, collaborations, and entry-level opportunities — let's connect!
           </p>
         </div>
 
@@ -88,10 +88,10 @@ const Contact = () => {
               <h3 className="text-2xl font-heading font-semibold mb-8 text-gradient-accent">
                 Get In Touch
               </h3>
-              
+
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                I'm always excited to work on new projects and collaborate with passionate individuals. 
-                Whether you have a specific project in mind or just want to explore possibilities, 
+                I'm a fresher actively looking for internships and entry-level roles in software development,
+                AI/ML, and web development. If you're hiring, collaborating, or just want to connect —
                 I'd love to hear from you!
               </p>
 
@@ -105,7 +105,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <div className="text-sm text-muted-foreground">{info.label}</div>
-                        <a 
+                        <a
                           href={info.href}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -126,8 +126,8 @@ const Contact = () => {
                   <span className="font-semibold">Quick Response</span>
                 </div>
                 <p className="text-sm opacity-90">
-                  I typically respond to messages within 24 hours. For urgent projects, 
-                  feel free to reach out via phone or LinkedIn.
+                  I typically respond within 24 hours. Whether it's an internship opportunity,
+                  a collaboration, or just a hello — I'm always happy to connect!
                 </p>
               </div>
             </div>
@@ -139,7 +139,7 @@ const Contact = () => {
               <h3 className="text-2xl font-heading font-semibold mb-8 text-gradient-accent">
                 Send a Message
               </h3>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
@@ -182,14 +182,14 @@ const Contact = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Tell me about your project, requirements, timeline, or any questions you have..."
+                    placeholder="Hi Mo! I'm reaching out regarding an internship / collaboration / opportunity..."
                     rows={6}
                     required
                     className="w-full resize-none"
                   />
                 </div>
 
-                <Button 
+                <Button
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full btn-hero group"
@@ -210,23 +210,23 @@ const Contact = () => {
 
               {/* Project Types */}
               <div className="mt-8 p-6 bg-muted/20 rounded-xl">
-                <h4 className="font-semibold text-foreground mb-3">Perfect for:</h4>
+                <h4 className="font-semibold text-foreground mb-3">Open to:</h4>
                 <div className="grid grid-cols-2 gap-2 text-sm">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-muted-foreground">Web Applications</span>
+                    <span className="text-muted-foreground">Web Development Roles</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                    <span className="text-muted-foreground">AI/ML Solutions</span>
+                    <span className="text-muted-foreground">AI/ML Internships</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="text-muted-foreground">Chatbot Development</span>
+                    <span className="text-muted-foreground">Open Source Collaboration</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-success rounded-full"></div>
-                    <span className="text-muted-foreground">Automation Tools</span>
+                    <span className="text-muted-foreground">Freelance Projects</span>
                   </div>
                 </div>
               </div>
