@@ -332,7 +332,7 @@ const Achievements = () => {
             <ChevronLeft className="h-5 w-5" />
           </button>
 
-          <div className="overflow-hidden">
+          <div className="p-4 overflow-hidden">
             <div
               style={{
                 display: 'flex',
@@ -389,11 +389,6 @@ const Achievements = () => {
                   setIsAnimating(false);
                 }, 450);
               }}
-              // className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-              //   currentVisible.includes(i)
-              //     ? 'bg-primary scale-125'
-              //     : 'bg-muted-foreground/30 hover:bg-muted-foreground/60'
-              // }`}
             />
           ))}
         </div>
