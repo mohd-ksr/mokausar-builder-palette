@@ -265,7 +265,8 @@ export default function KausarBot() {
         role: m.role,
         content: m.content,
       }));
-
+      // console.log('API Key:', import.meta.env.VITE_GROQ_API_KEY);
+      // console.log('Sending request...');
       const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
         method: 'POST',
         headers: {
@@ -273,8 +274,8 @@ export default function KausarBot() {
           'Authorization': `Bearer ${import.meta.env.VITE_GROQ_API_KEY}`,
         },
         body: JSON.stringify({
-          model: 'llama-3.3-70b-versatile',
-          max_tokens: 400,
+          model: 'llama-3.1-8b-instant',
+          max_tokens: 200,
           temperature: 0.7,
           messages: [
             { role: 'system', content: SYSTEM_PROMPT },
@@ -284,14 +285,16 @@ export default function KausarBot() {
       });
 
       const data = await res.json();
+      // console.log('Response:', data);
       const raw = data.choices?.[0]?.message?.content || "Sorry, I couldn't get a response. Please try again!";
       const { text: cleanText, links } = parseLinks(raw);
 
       setMessages(prev => [...prev, { role: 'assistant', content: cleanText, links }]);
-    } catch {
+    } catch(err) {
+      // console.error('Error fetching bot response:', err);
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: "Oops! Something went wrong. You can email Mo directly at mohd.ksr2003@gmail.com",
+        content: `Error: ${err}`,
         links: [{ label: 'Contact Mo', href: '/#contact' }],
       }]);
     } finally {
