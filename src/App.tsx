@@ -9,6 +9,7 @@ import CertificationsPage from './pages/CertificationsPage';
 import { useEffect } from "react";
 const queryClient = new QueryClient();
 import WaterBackground from './components/WaterBackground';
+import KausarBot from './components/KausarBot';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/certifications" element={<CertificationsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <KausarBot />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
