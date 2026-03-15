@@ -11,16 +11,8 @@
     /* Light Theme Colors */
 
     --background: 225 35% 95%;
-    --background-gradient: linear-gradient(135deg,
-        #60a5fa 0%,
-        #818cf8 40%,
-        #c084fc 100%);
-    --foreground: 222 47% 11%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
-
-    --popover: 0 0% 100%;
+    /* --background-gradient: linear-gradient(135deg, #080e74903344 0%, #0e7490 30%, #06b6d4 60%, #67e8f9 100%); */
+    --background-gradient: linear-gradient(135deg, #67e8f9 0%, #06b6d4 30%, #0e7490 60%, #90f1eb 100%);
     --popover-foreground: 222 47% 11%;
 
     /* Primary */
@@ -115,11 +107,11 @@
   }
 
   .card-gradient {
-    @apply bg-white/70 backdrop-blur-lg border border-white/40 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    @apply bg-white/25 backdrop-blur-md border border-white/30 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
 
   .card-project {
-    @apply bg-gradient-to-br from-card via-card to-muted/20 border border-border/30 rounded-2xl p-6 transition-all duration-500 hover:shadow-strong hover:-translate-y-2 hover:border-primary/50 cursor-pointer;
+    @apply bg-white/25 backdrop-blur-md border border-white/30 rounded-2xl p-6 transition-all duration-500 hover:shadow-strong hover:-translate-y-2 hover:border-white/60 cursor-pointer;
   }
 
   .text-gradient-primary {

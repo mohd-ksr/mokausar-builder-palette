@@ -7,6 +7,9 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
+    allowedHosts: [
+      "alysha-nonvibrating-winona.ngrok-free.dev"
+    ],
     port: 8080,
   },
   plugins: [

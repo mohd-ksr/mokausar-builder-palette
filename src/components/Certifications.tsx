@@ -233,7 +233,7 @@ const Certifications = () => {
   ];
 
   return (
-    <section id="certifications" className="section-padding bg-white/40 backdrop-blur-sm">
+    <section id="certifications" className="section-padding bg-white/50">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}

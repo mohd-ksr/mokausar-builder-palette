@@ -47,6 +47,7 @@ const Footer = () => {
   };
 
   return (
+    // <section id="home" className="min-h-screen flex items-center justify-center bg-white/50 section-padding"></section>
     <footer className="bg-gradient-to-br from-card to-background border-t border-border/50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Main Footer Content */}

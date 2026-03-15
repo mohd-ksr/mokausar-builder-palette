@@ -13,8 +13,8 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-transparent section-padding">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-100 via-white to-sky-100"></div>
+    <section id="home" className="min-h-screen flex items-center justify-center bg-white/50 section-padding">
+      {/* <div className="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-100 via-white to-sky-100"></div> */}
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}

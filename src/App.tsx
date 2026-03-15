@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import CertificationsPage from './pages/CertificationsPage';
 import { useEffect } from "react";
 const queryClient = new QueryClient();
+import WaterBackground from './components/WaterBackground';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -24,10 +25,10 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <WaterBackground />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/certifications" element={<CertificationsPage />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
