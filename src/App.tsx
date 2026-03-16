@@ -26,7 +26,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        {/* <WaterBackground /> */}
+        <WaterBackground />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/certifications" element={<CertificationsPage />} />
