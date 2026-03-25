@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Trophy, Flame, Code2, Star, GraduationCap, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Trophy, Flame, Code2, Star, GraduationCap, ChevronLeft, ChevronRight, BookOpen } from 'lucide-react';
 
 const Achievements = () => {
   const [startIndex, setStartIndex] = useState(0);
@@ -19,6 +19,19 @@ const Achievements = () => {
       bgColor: "bg-warning/10",
       borderColor: "border-warning/30",
       badgeColor: "bg-warning",
+    },
+    {
+      icon: BookOpen,
+      emoji: "📊",
+      title: "GATE 2026 Qualified – CS",
+      org: "IIT Guwahati",
+      date: "March 2026",
+      description: "Qualified GATE 2026 in Computer Science & Information Technology with a score of 480 and All India Rank of 9106 out of hundreds of thousands of candidates.",
+      tags: ["GATE 2026", "AIR 9106", "Score 480", "CS"],
+      color: "text-accent",
+      bgColor: "bg-accent/10",
+      borderColor: "border-accent/30",
+      badgeColor: "bg-accent",
     },
     {
       icon: Star,
