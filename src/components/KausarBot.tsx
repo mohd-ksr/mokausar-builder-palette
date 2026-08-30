@@ -736,7 +736,8 @@ export default function KausarBot() {
       });
 
       const data = await res.json();
-      const raw = data.choices?.[0]?.message?.content || "Sorry, I couldn't get a response. Please try again!";
+      const raw = data.choices?.[0]?.message?.content || "Sorry, this service is currently under development. Please check back soon!
+";
       const { text: cleanText, links } = parseLinks(raw);
 
       setMessages(prev => [...prev, { role: 'assistant', content: cleanText, links }]);
